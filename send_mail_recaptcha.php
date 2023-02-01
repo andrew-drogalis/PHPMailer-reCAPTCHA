@@ -60,8 +60,8 @@
                 $mail->isHTML(true);                                        
                 $mail->Subject = 'Website Notification: ' . $subject;
                 // Inline CSS can be utilized for formating
-                $mail->Body    = 'Website Message:<br><br><b>From</b>: <span style="text-transform: uppercase;">' . $name . '</span><br><b>Email</b>: ' . $email_address . '<br><br>The contents of the message is as follows:<br><p style="padding: 1rem 0; border-top: 1px solid #000000; border-bottom: 1px solid #000000;">' . $message . '</p><br>This is an automated message.';
-                $mail->AltBody = 'Website Message: From: ' . $name . '. Email: ' . $email_address . '. The contents of the message is as follows:' . $message . ' This is an automated message.';
+                $mail->Body    = 'The contents of the message is as follows:<br><p style="padding: 1rem 0; border-top: 1px solid #000000; border-bottom: 1px solid #000000;">' . $message . '</p><br>This is an automated message.';
+                $mail->AltBody = 'The contents of the message is as follows:' . $message . ' This is an automated message.';
             
                 $mail->send(); 
                 echo "Message successful";
